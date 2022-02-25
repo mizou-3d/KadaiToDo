@@ -16,6 +16,7 @@
 		D61DCD0827C374BC002DF522 /* ToAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61DCD0727C374BC002DF522 /* ToAddViewController.swift */; };
 		D61DCD0B27C64597002DF522 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = D61DCD0A27C64597002DF522 /* Realm */; };
 		D61DCD0D27C64597002DF522 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D61DCD0C27C64597002DF522 /* RealmSwift */; };
+		D61DCD0F27C93685002DF522 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61DCD0E27C93685002DF522 /* ToDo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D61DCCFF27C36BB9002DF522 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D61DCD0127C36BB9002DF522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D61DCD0727C374BC002DF522 /* ToAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToAddViewController.swift; sourceTree = "<group>"; };
+		D61DCD0E27C93685002DF522 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				D61DCCFE27C36BB9002DF522 /* LaunchScreen.storyboard */,
 				D61DCD0127C36BB9002DF522 /* Info.plist */,
 				D61DCD0727C374BC002DF522 /* ToAddViewController.swift */,
+				D61DCD0E27C93685002DF522 /* ToDo.swift */,
 			);
 			path = KadaiToDo;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D61DCCF827C36BB4002DF522 /* ViewController.swift in Sources */,
+				D61DCD0F27C93685002DF522 /* ToDo.swift in Sources */,
 				D61DCCF427C36BB4002DF522 /* AppDelegate.swift in Sources */,
 				D61DCCF627C36BB4002DF522 /* SceneDelegate.swift in Sources */,
 				D61DCD0827C374BC002DF522 /* ToAddViewController.swift in Sources */,

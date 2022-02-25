@@ -6,10 +6,15 @@
 //
 
 import UIKit
+import RealmSwift
 
-class ToAddViewController: UIViewController {
+class ToAddViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var deadlineLabel: UITextField!
+    @IBOutlet var titleTextField: UITextField!
+    @IBOutlet var contentTextView: UITextView!
+    
+    var todoItems: Results<ToDo>!
     
     var datePicker: UIDatePicker = UIDatePicker()
 
@@ -38,8 +43,19 @@ class ToAddViewController: UIViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
         deadlineLabel.text = "\(formatter.string(from: datePicker.date))"
-       }
+    }
     
+    @IBAction func saveToDo(){
+        let realm2 = try! Realm()
+        let todoItem: ToDo = ToDo()
+        todoItem.ToDoTitle = self.titleTextField.text
+        todoItem.ToDoSubtitle = self.contentTextView.text
+        todoItem.deadLine = self.deadlineLabel.text
+        try! realm2.write{
+            realm2.add(todoItem)
+        }
+        self.navigationController?.popViewController(animated: true)
+    }
 
     /*
     // MARK: - Navigation

@@ -21,12 +21,28 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="0Zl-v3-RgP">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="kVb-6Y-1If" detailTextLabel="784-gW-5KW" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="0Zl-v3-RgP">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Zl-v3-RgP" id="k3p-fx-yij">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kVb-6Y-1If">
+                                                    <rect key="frame" x="20" y="14" width="25" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="784-gW-5KW">
+                                                    <rect key="frame" x="20" y="30.5" width="40.5" height="13.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -48,6 +64,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="2Ab-Th-IiT" id="Llg-FG-MJQ"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="897.10144927536237" y="29.464285714285712"/>
@@ -106,10 +125,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="追加" id="k2i-yB-54t">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Qcr-Oy-2ds"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Qcr-Oy-2ds">
+                            <connections>
+                                <action selector="saveToDo" destination="QSt-WV-IfJ" id="4SK-O4-Q6b"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="contentTextView" destination="Krb-xg-c9I" id="niR-OF-8RD"/>
                         <outlet property="deadlineLabel" destination="DNL-k9-3Wr" id="kfs-lH-ef6"/>
+                        <outlet property="titleTextField" destination="93i-Uu-MBQ" id="KYl-jC-4te"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z3v-HE-oI5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
