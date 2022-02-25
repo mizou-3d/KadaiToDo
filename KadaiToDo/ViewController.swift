@@ -40,8 +40,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let item: ToDo = todoItems[indexPath.row]
         cell.textLabel?.text = item.ToDoTitle
-        cell.detailTextLabel?.text = item.ToDoSubtitle
-        
+        cell.detailTextLabel?.text = item.deadLine
         return cell
     }
     
